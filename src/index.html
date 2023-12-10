@@ -16,7 +16,7 @@
   </head>
   <body id="home">
     <header class="hero">
-      <div id="navbar" class="navbar">
+      <div id="navbar" class="navbar top">
         <h1 class="logo">
           <span class="text-primary"><i class="fas fa-book-open"></i> Edge</span
           >Ledger
@@ -157,7 +157,7 @@
                 nostrum libero facilis aspernatur fugiat, beatae quos
                 reprehenderit amet rem sit maxime officiis totam ipsum.
               </p>
-              <a href="#" class="btn btn-outline">
+              <a href="./blog.html" class="btn btn-outline">
                 <i class="fas fa-chevron-right"></i>
                 Read Our Blog
               </a>
@@ -260,5 +260,26 @@
       </div>
       <p>Copyright &copy; 2023 - EdgeLedger</p>
     </footer>
+
+
+    <script>
+      const navbar = document.getElementById("navbar");
+      let scroll = false;
+      window.onscroll = function () {
+        if (window.pageYOffset > 100) {
+          navbar.classList.remove("top");
+          if (!scroll) {
+            navbar.style.transform = "translateY(-70px)";
+          }
+          setTimeout(function () {
+            navbar.style.transform = "translateY(0)";
+            scroll = true;
+          }, 200);
+        } else {
+          navbar.classList.add("top");
+          scroll = false;
+        }
+      };
+    </script>
   </body>
 </html>

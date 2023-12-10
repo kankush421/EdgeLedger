@@ -52,6 +52,7 @@ img {
   position: fixed;
   top: 0;
   padding: 0 30px;
+  transition: 0.5s;
 }
 
 .navbar a {
@@ -72,6 +73,9 @@ img {
   font-weight: 400;
 }
 
+.navbar.top{
+    background: transparent;
+}
 /** Header **/
 
 .hero {
@@ -117,6 +121,11 @@ img {
   z-index: 10;
 }
 
+.hero.blog{
+    background-image: url("./img/home/pexels-pixabay-261579.jpg");
+    background-size: cover;
+    height: 30vh;
+}
 /** Icons **/
 
 .icon {
@@ -179,6 +188,29 @@ img {
   margin-top: 20px;
 }
 
+/** Post **/
+
+.post{
+    padding: 50px 30px;
+}
+
+.post h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: #ccc 1px solid;
+}
+
+.post .meta{
+    margin-bottom: 30px;
+}
+
+.post img{
+    width: 300px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 30px;
+}
 /** Footer **/
 
 .footer {
